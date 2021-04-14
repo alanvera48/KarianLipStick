@@ -1,0 +1,242 @@
+main
+	max-width: 100%
+	min-height: 100vh
+	height: auto
+	.circle-catalogue
+		position: absolute
+		left: 0
+		width: 100%
+		height: 120%
+		background: #ECC3C3
+		z-index: 0
+		clip-path: circle(20rem at center)
+		top: 50%
+	.section-1
+		background: url("Images/woman-lipstick(2).jpg")
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		z-index: 1
+		+f-column()
+		transition: all ease 1s
+		div
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			align-items: center
+			h1
+				font-size: 4.5rem
+				letter-spacing: 0.5rem
+				word-spacing: 0.27rem
+			p
+				margin-right: auto
+			button
+				width: 8.3rem
+				height: auto
+				padding: 0.5rem
+				border: none
+				cursor: pointer
+				font-weight: bold
+				transition: ease-in 0.4s
+				background: rgb(220,231,99)
+				background: linear-gradient(83deg, rgba(220,231,99,0.9734768907563025) 0%, rgba(228,238,84,1) 4%, rgba(210,207,94,0.948266806722689) 35%, rgba(202,204,74,0.8306197478991597) 83%)
+				&:hover
+					filter: drop-shadow( 0.55rem 0.27rem 0.16rem rgba(0,0,0,0.8))
+	.about
+		+f-column()
+		overflow-y: hidden
+		h2
+			font-size: 1.6rem
+			font-weight: bold
+			z-index: 1
+		p
+			font-size: 0.8rem
+			z-index: 1
+		div
+			position: absolute
+			top: calc(100vh + 1.2rem)
+			left: 0
+			width: 100%
+			height: 100%
+			background: rgba(130, 127, 127, 0.68)
+			clip-path: circle(16.6rem at right)
+			z-index: 0
+	.contact
+		width: 100%			
+		height: 100vh
+		padding: 0 !important
+		+f-row()
+		.circle-contact
+			position: absolute
+			top: calc(200vh + 1.2rem)
+			left: 0
+			width: 100%
+			height: 100%
+			background: rgba(166.45, 90.55, 90.55, 0.68)
+			clip-path: circle(16.6rem at bottom)
+			z-index: 1
+		h4
+			font-size: 3rem
+		.contact-introduction
+			background-color: #3C3C3C
+			width: calc(100%/2)
+			height: 100%
+			padding: 120px 30px 30px 30px
+			display: flex
+			flex-direction: column
+			justify-content: start
+			align-items: start
+			text-align: start
+			z-index: 1
+			p
+				margin: 1.5rem
+			.contact-social-media
+				ul
+					display: inline-flex
+					li
+						margin-right: 0.55rem
+						a
+							i
+								font-size: 1.4rem
+								transition: all ease-out 0.8s
+								color: #a29090
+								&:hover
+									font-size: 1.8rem
+
+		.contact-email
+			background: #a29090
+			width: calc(100%/2)
+			height: 100%
+			+f-column()
+			form
+				width: 85%
+				height: 100%
+				+f-column()
+				background: transparent
+				position: relative
+				z-index: 10
+				top: 20px
+				input
+					width: 100%
+					height: 1.7rem
+					border: none
+					border-bottom: 2px solid rgba(129, 35, 35, 0.8)
+					background: transparent
+					color: #FFFFFF
+					outline: none
+					padding: 2px
+					&::placeholder
+						color: #FFFFFF
+					&:active
+						animation: activeInput
+				textarea
+					width: 100%
+					border: none
+					height: 90%
+					max-height: 11rem
+					border-top: none
+					border-left: none 
+					border-bottom: 2px solid rgba(129, 35, 35, 0.8)
+					background: transparent
+					color: #FFFFFF
+					outline: none
+					padding: 2px
+					&::placeholder
+						color: #FFFFFF
+				.boton
+					border: none !important
+					background: rgba(129, 35, 35, 0.8)
+					transition: all ease 1s
+					&:hover
+						background: rgba(129, 35, 35, 1)
+				.contact-form-loader
+					width: 4rem
+			.form-img
+				position: absolute
+				right: 20px
+				z-index: 0
+				width: 12.5rem
+				height: 25rem
+	.catalogue
+		padding: 150px 20px
+		+f-row()
+		flex-wrap: wrap
+		flex-shrink: 2
+		background: #d59090
+		height: auto
+		min-height: 100vh
+		div
+			height: auto
+			max-height: 500px
+			width: 300px
+			padding: 20px
+			display: block
+			margin: 0.5rem 0.60rem
+			background-color: #EBE6E6
+			text-align: center
+			transition:  all 0.3s ease-out
+			&:hover
+				transform: scale(.9)
+				box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
+			img
+				width: 250px
+				height: 300px
+			p
+				color: #291E1E
+				font-size: 0.8rem
+			small
+				font-size: 0.5rem
+				color: #EA7070
+			i
+				color:	#ACA0A0
+				cursor: pointer
+				transition: all ease 1s
+
+
+.selected
+	color: #F6F31E !important
+	
+@media screen and (max-width: 1024px)
+	main
+		.contact
+			.contact-introduction
+				padding: 70px 5px 5px 5px
+						
+
+@media screen and  (max-width: 768px)
+	main
+		.contact
+			h4
+				font-size: 1.8rem
+			.circle-contact
+				z-index: 0
+				clip-path: circle(15rem at right)
+
+@media screen and (max-width: 480px)
+	main
+		.contact
+			height: auto
+			+f-column()
+			.contact-introduction
+				width: 100%
+				padding: 65px 2px 2px 2px
+				p
+					font-size: 1rem
+					margin: 1rem
+			.contact-email
+				background: #a29090
+				width: 100%
+				height: 100%
+				form
+					textarea
+						height: auto
+				.form-img
+					right: 20px
+					z-index: 0
+					width: 9rem
+					height: 11rem
+
+
+
+
+
